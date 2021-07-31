@@ -216,6 +216,12 @@ define U-Boot/pine64_plus
   UENV:=a64
 endef
 
+define U-Boot/can_gateway_4
+  BUILD_SUBTARGET:=cortexa7
+  NAME:=Peace CAN Gateway 4 (V3s)
+  BUILD_DEVICES:=sun8i-v3s-can-gateway-4
+endef
+
 define U-Boot/Sinovoip_BPI_M2_Plus
   BUILD_SUBTARGET:=cortexa7
   NAME:=Bananapi M2 Plus
@@ -280,6 +286,7 @@ UBOOT_TARGETS := \
 	orangepi_pc2 \
 	pangolin \
 	pine64_plus \
+	can_gateway_4 \
 	Sinovoip_BPI_M2_Plus \
 	sopine_baseboard \
 	orangepi_zero_plus

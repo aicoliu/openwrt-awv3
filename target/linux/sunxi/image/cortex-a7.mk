@@ -208,6 +208,17 @@ endef
 TARGET_DEVICES += sun8i-h3-orangepi-2
 
 
+define Device/sun8i-v3s-can-gateway-4
+  DEVICE_TITLE:=Peace CAN Gateway 4
+  DEVICE_PACKAGES:=kmod-rtc-sunxi kmod-leds-gpio kmod-ledtrig-heartbeat \
+    kmod-can kmod-can-raw kmod-can-bcm kmod-can-gw kmod-can-vcan kmod-can-mcp251x
+  SUPPORTED_DEVICES:=peace,can-gateway-4
+  SUNXI_DTS:=sun8i-v3s-can-gateway-4
+endef
+
+TARGET_DEVICES += sun8i-v3s-can-gateway-4
+
+
 define Device/sun7i-a20-pcduino3
   DEVICE_TITLE:=LinkSprite pcDuino3
   DEVICE_PACKAGES:=kmod-sun4i-emac kmod-rtc-sunxi kmod-ata-core kmod-ata-sunxi kmod-rtl8xxxu rtl8188eu-firmware

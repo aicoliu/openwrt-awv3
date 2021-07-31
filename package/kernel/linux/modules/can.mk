@@ -290,3 +290,18 @@ define KernelPackage/can-xilinx-can/description
 endef
 
 $(eval $(call KernelPackage,can-xilinx-can))
+
+
+define KernelPackage/can-mcp251x
+  TITLE:=Microchip MCP251x and MCP25625 SPI CAN controllers
+  KCONFIG:=CONFIG_CAN_MCP251X
+  FILES:=$(LINUX_DIR)/drivers/net/can/spi/mcp251x.ko
+  AUTOLOAD:=$(call AutoProbe,mcp251x)
+  $(call AddDepends/can)
+endef
+
+define KernelPackage/can-mcp251x/description
+ Microchip MCP251x and MCP25625 SPI CAN controllers.
+endef
+
+$(eval $(call KernelPackage,can-mcp251x))
